@@ -66,9 +66,7 @@ public class WeatherHistoryPage {
 
     public WeatherHistoryPage checkAllLinksInPage() {
         List<WebElement> allAnchors=driver.getDriver().findElements(By.tagName("a"));
-        for(WebElement anchor: allAnchors) {
-            LinksChecker.checkLink(anchor.getAttribute("href"),"200");
-        }
+        LinksChecker.checkLink(allAnchors,"200");
         return this;
     }
 
