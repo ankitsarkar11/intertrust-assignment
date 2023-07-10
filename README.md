@@ -22,7 +22,7 @@ The following dependencies/plugins have been used:
 ```
 mvn clean test -Dplatform=webui
 ```
-2. For running Web UI test cases, run with the following command:
+2. For running API test cases, run with the following command:
 ```
 mvn clean test -Dplatform=api
 ```
