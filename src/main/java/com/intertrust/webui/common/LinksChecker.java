@@ -2,6 +2,7 @@ package com.intertrust.webui.common;
 
 import io.restassured.RestAssured;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class LinksChecker {
     public static void checkLink(String url, String expectedStatusCode) {
@@ -10,6 +11,6 @@ public class LinksChecker {
                         .when()
                         .get()
                         .statusCode());
-        Assert.assertEquals(statusCode,expectedStatusCode,"Assertion failed with status code: "+statusCode+" at: "+url);
+        new SoftAssert().assertEquals(statusCode,expectedStatusCode,"Assertion failed with status code: "+statusCode+" at: "+url);
     }
 }
