@@ -5,11 +5,11 @@ The framework is structured as POM design pattern and uses Maven.
 
 The framework is divided into two parts:
 1. API
-<br>API Files: src/main/java/com/intertrust/api
-<br>Test API Files: src/main/test/com/intertrust/api
+<br>Files: src/main/java/com/intertrust/api
+<br>Test Files: src/main/test/com/intertrust/api
 2. Web UI
-   <br>API Files: src/main/java/com/intertrust/webui
-   <br>Test API Files: src/main/test/com/intertrust/webui
+   <br>Files: src/main/java/com/intertrust/webui
+   <br>Test Files: src/main/test/com/intertrust/webui
 
 The following dependencies/plugins have been used:
 1. Selenium
