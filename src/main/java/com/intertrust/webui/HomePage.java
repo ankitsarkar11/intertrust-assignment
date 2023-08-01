@@ -1,13 +1,10 @@
 package com.intertrust.webui;
 
-import com.intertrust.webui.common.Driver;
+import com.intertrust.webui.templates.Page;
+
 import org.testng.Assert;
 
-public class HomePage {
-    private final Driver driver;
-    public HomePage() {
-        this.driver=Driver.driver;
-    }
+public class HomePage extends Page{
     public HomePage openHomePage() {
         driver.openPage("https://www.visualcrossing.com/");
         return this;

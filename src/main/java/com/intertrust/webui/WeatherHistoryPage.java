@@ -1,20 +1,16 @@
 package com.intertrust.webui;
 
-import com.intertrust.webui.common.Driver;
 import com.intertrust.webui.common.LinksChecker;
+import com.intertrust.webui.templates.Page;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.List;
 
-public class WeatherHistoryPage {
-    private final Driver driver;
-    public WeatherHistoryPage() {
-        this.driver=Driver.driver;
-    }
+public class WeatherHistoryPage extends Page{
     public WeatherHistoryPage isLocationDataValid(String location) {
         try {
             Assert.assertTrue(driver.getText("//a[@id=\"locationDropdownMenuButton\"]").trim().matches(location));

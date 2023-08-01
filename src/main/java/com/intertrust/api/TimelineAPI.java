@@ -33,7 +33,11 @@ public class TimelineAPI {
         return this;
     }
     public TimelineAPI isCostCorrect(String expectedCredit) {
-        response.then().assertThat().body("queryCost",Matchers.equalTo(expectedCredit));
+        try{
+            response.then().assertThat().body("queryCost",Matchers.equalTo(Integer.parseInt(expectedCredit)));
+        } catch(NumberFormatException e){
+            Assert.fail(expectedCredit+" is not a valid integer", e);
+        }
         return this;
     }
     public TimelineAPI isTimeZoneCorrect(String expectedTimeZone) {

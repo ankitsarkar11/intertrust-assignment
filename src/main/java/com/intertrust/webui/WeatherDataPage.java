@@ -1,13 +1,10 @@
 package com.intertrust.webui;
 
-import com.intertrust.webui.common.Driver;
+import com.intertrust.webui.templates.Page;
+
 import org.testng.Assert;
 
-public class WeatherDataPage {
-    private Driver driver;
-    public WeatherDataPage() {
-        this.driver=Driver.driver;
-    }
+public class WeatherDataPage extends Page{
     public WeatherDataPage isWeatherDataPageOpen() {
         Assert.assertTrue(driver.getDriver().getTitle().matches("Historical Weather Data & Weather Forecast Data \\| Visual Crossing"));
         return this;

@@ -3,7 +3,6 @@ package com.intertrust.api.steps;
 import com.intertrust.api.TimelineAPI;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.restassured.response.Response;
 
 public class TimelineAPISteps {
     private TimelineAPI timelineAPI;
