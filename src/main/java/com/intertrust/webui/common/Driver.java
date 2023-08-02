@@ -3,6 +3,7 @@ package com.intertrust.webui.common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +20,9 @@ public class Driver {
         return this.webDriver;
     }
     public void startBrowser() {
-        webDriver=new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        webDriver=new ChromeDriver(options);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         wait=new WebDriverWait(this.webDriver,Duration.ofSeconds(60));
     }
